@@ -3,31 +3,80 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --primary-color: rgba(255, 255, 255, 1);
+  --secondary-color: rgba(3, 52, 152, 1);
+  --section-bg-color: rgba(3, 52, 152, 1);
+  --section-bg: rgba(221, 232, 255, 1);
+  --card-linear-gradient-color: linear-gradient(180deg, #DDE8FF 0%, #FFFFFF 100%);
+  --paragraph-color: rgba(230, 230, 230, 1);
+  --paragraph-gray-color: rgba(103, 103, 103, 1);
+  --heading-color: rgba(255, 255, 255, 1);
+  --text-color: rgba(230, 230, 230, 1);
+  --slider-btn-color: rgba(221, 232, 255, 1);
+  --para-color: rgba(103, 103, 103, 1);
+  --auth-liner-color: linear-gradient(180deg, #0575E6 0%, #02298A 84.79%, #021B79 100%);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+#smallnav,
+.open {
+  transition: .3s !important
+}
+
+.testimonials-card:hover p {
+  color: var(--text-color)
+}
+
+.testimonials-card:hover h3 {
+  color: #fff !important
+}
+
+.pricingCard:hover button,
+.pricingCard:hover h3 {
+  color: var(--secondary-color) !important;
+  transition: .5s !important
+}
+
+.pricingCard:hover li {
+  font-weight: 500 !important;
+  transition: .5s !important
+}
+
+.open {
+  height: max-content !important;
+  padding: 16px 20px !important
+}
+
+.team_card:hover .team_icon {
+  transform: translateY(0) !important;
+  transition: .5s !important
+}
+
+#smallnav,
+.Charity-card:hover h3,
+.Charity-card:hover p,
+.open {
+  transition: .3s !important
+}
+
+.open {
+  height: max-content !important;
+  padding: 16px 20px !important
+}
+
+.Charity-card:hover p {
+  color: var(--text-color)
+}
+
+.Charity-card:hover h3 {
+  color: #fff !important
+}
+
+.show {
+  display: flex !important
 }
